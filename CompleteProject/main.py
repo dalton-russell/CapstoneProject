@@ -32,6 +32,7 @@ def get_inputs():
     dc2 = e4.get()
     dc3 = e5.get()
     dc4 = e6.get()
+    global claimAmount
     claimAmount = e7.get()
     fill_array(dd,ad,dc1,dc2,dc3,dc4)
 
@@ -332,7 +333,7 @@ if __name__ == "__main__":
     root.withdraw()
 
     #print proper message box
-    if (claimAmount + range > prediction):
+    if (int(claimAmount) - range > prediction):
         mb.showerror("Claim Denial", "Claim was not accepted.")
     else:
         mb.showinfo("Claim Acceptance", "Claim was accepted")
